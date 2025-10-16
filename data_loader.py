@@ -226,5 +226,4 @@ def getIndex(TestLabel, temp):
                 index[1][k] = j + 1
                 k += 1
 
-
     return index
