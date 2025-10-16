@@ -13,14 +13,10 @@ pad_width2 = np.int32(pad_width2)
 
 def data_load(name):
     if name == "Houston":
-        # DataPath1 = './dataset/Houston2013/Houston_HS.mat'
-        # DataPath2 = './dataset/Houston2013/Houston_LiDAR.mat'
-        # TRPath = './dataset/Houston2013/Houston_train.mat'
-        # TSPath = './dataset/Houston2013/Houston_test.mat'
-        DataPath1 = r'D:\codes\ExViT\dataset\Houston2013\Houston_HS.mat'
-        DataPath2 = r'D:\codes\ExViT\dataset\Houston2013\Houston_LIDAR.mat'
-        TRPath = r'D:\codes\ExViT\dataset\Houston2013\Houston_train.mat'
-        TSPath = r'D:\codes\ExViT\dataset\Houston2013\Houston_test.mat'
+        DataPath1 = './dataset/Houston2013/Houston_HS.mat'
+        DataPath2 = './dataset/Houston2013/Houston_LiDAR.mat'
+        TRPath = './dataset/Houston2013/Houston_train.mat'
+        TSPath = './dataset/Houston2013/Houston_test.mat'
 
         TrLabel = io.loadmat(TRPath)
         TsLabel = io.loadmat(TSPath)
@@ -36,14 +32,10 @@ def data_load(name):
         Data2 = Data2.astype(np.float32)
 
     elif name == "Trento":
-        # DataPath1 = './dataset/Trento/HSI.mat'
-        # DataPath2 = './dataset/Trento/LiDAR.mat'
-        # TRPath = './dataset/Trento/TRLabel.mat'
-        # TSPath = './dataset/Trento/TSLabel.mat'
-        DataPath1 = r'D:\codes\ExViT\dataset\Trento\HSI.mat'
-        DataPath2 = r'D:\codes\ExViT\dataset\Trento\LiDAR.mat'
-        TRPath = r'D:\codes\ExViT\dataset\Trento\TRLabel.mat'
-        TSPath = r'D:\codes\ExViT\dataset\Trento\TSLabel.mat'
+        DataPath1 = './dataset/Trento/HSI.mat'
+        DataPath2 = './dataset/Trento/LiDAR.mat'
+        TRPath = './dataset/Trento/TRLabel.mat'
+        TSPath = './dataset/Trento/TSLabel.mat'
 
         TrLabel = io.loadmat(TRPath)
         TsLabel = io.loadmat(TSPath)
@@ -233,5 +225,6 @@ def getIndex(TestLabel, temp):
                 index[0][k] = i + 1
                 index[1][k] = j + 1
                 k += 1
+
 
     return index
